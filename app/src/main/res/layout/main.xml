@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#7AEAFFFA">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="30dp">
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/menu"
+            android:scaleType="centerCrop"
+            android:id="@+id/menu"
+            android:layout_marginLeft="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Iconvertor"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:fontFamily="serif"
+            android:layout_marginLeft="10dp"/>
+
+        <ImageButton
+            android:layout_gravity="center"
+            android:id="@+id/star"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="45dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/star" />
+
+        <ImageButton
+            android:layout_gravity="center"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/loupe"
+            android:scaleType="centerInside"
+            android:id="@+id/loupe"
+            android:layout_marginLeft="3dp"
+            android:onClick="onClick"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:layout_gravity="center">
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/chieudai"
+                        android:scaleType="centerInside"
+                        android:id="@+id/chieudai"
+                        android:onClick="onClick"/>
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:padding="6dp"
+                    android:text="Chiều dài"
+                    android:layout_gravity="center"/>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:layout_gravity="center">
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/time"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/thoigian"
+                        android:onClick="onClick"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:fontFamily="sans-serif-light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:padding="6dp"
+                    android:text="Thời gian"
+                    android:layout_gravity="center"/>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:layout_gravity="center">
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/bmi"
+                        android:scaleType="centerInside"
+                        android:id="@+id/bmi"
+                        android:onClick="onClick"
+                        />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:padding="6dp"
+                    android:text="BMI"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-light"/>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:layout_gravity="center"
+                    >
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/speed"
+                        android:scaleType="centerInside"
+                        android:id="@+id/vantoc"
+                        android:onClick="onClick"/>
+
+                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:fontFamily="sans-serif-light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:padding="6dp"
+                    android:text="Vận tốc"
+                    android:layout_gravity="center"/>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:layout_gravity="center">
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/donation"
+                        android:scaleType="centerInside"
+                        android:id="@+id/tiente"
+                        android:onClick="onClick"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:padding="6dp"
+                    android:text="Tiền tệ"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:layout_gravity="center">
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/thetich"
+                        android:scaleType="centerInside"
+                        android:id="@+id/thetich"
+                        android:onClick="onClick"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:padding="6dp"
+                    android:text="Thể tích"
+                    android:layout_gravity="center"/>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:layout_gravity="center">
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/compass"
+                        android:scaleType="centerInside"
+                        android:id="@+id/goc"
+                        android:onClick="onClick"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:fontFamily="sans-serif-light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:padding="6dp"
+                    android:text="Góc"
+                    android:layout_gravity="center"/>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:layout_gravity="center">
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/apsuat"
+                        android:scaleType="centerInside"
+                        android:id="@+id/apsuat"
+                        android:onClick="onClick"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:padding="6dp"
+                    android:text="Áp suất"
+                    android:layout_gravity="center" />
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:layout_gravity="center">
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/giatoc"
+                        android:scaleType="centerInside"
+                        android:id="@+id/giatoc"
+                        android:onClick="onClick"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:padding="6dp"
+                    android:text="Gia tốc"
+                    android:layout_gravity="center" />
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:layout_gravity="center">
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/dress"
+                        android:scaleType="centerInside"
+                        android:id="@+id/kichco"
+                        android:onClick="onClick"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:padding="6dp"
+                    android:text="Kích cỡ"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:layout_gravity="center">
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/dientich"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/dientich"
+                        android:onClick="onClick"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:padding="6dp"
+                    android:text="Diện tích"
+                    android:layout_gravity="center"/>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:layout_gravity="center"
+                    >
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/mass"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/trongluong"
+                        android:onClick="onClick"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:fontFamily="sans-serif-light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:padding="6dp"
+                    android:text="Trọng lượng"
+                    android:layout_gravity="center"/>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:layout_gravity="center">
+                    <ImageButton
+                        android:id="@+id/nhietdo"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/nhietdo"
+                        android:scaleType="centerInside"
+                        android:onClick="onClick"/>
+                </androidx.cardview.widget.CardView>
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:padding="6dp"
+                    android:text="Nhiệt độ"
+                    android:layout_gravity="center"/>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:layout_gravity="center">
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/force"
+                        android:scaleType="centerInside"
+                        android:id="@+id/luc"
+                        android:onClick="onClick"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:padding="6dp"
+                    android:text="Lực"
+                    android:layout_gravity="center" />
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:layout_gravity="center">
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/sohoc"
+                        android:scaleType="centerInside"
+                        android:id="@+id/sohoc"
+                        android:onClick="onClick"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:padding="6dp"
+                    android:text="Số học"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

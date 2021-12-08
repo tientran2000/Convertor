@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.iconvertor">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Iconvertor">
+        <activity android:name=".Timkiem"></activity>
+        <activity android:name=".Thoigian" />
+        <activity android:name=".Luc" />
+        <activity android:name=".Kichco" />
+        <activity android:name=".Tiente" />
+        <activity android:name=".Giatoc" />
+        <activity android:name=".Vantoc" />
+        <activity android:name=".Nhietdo" />
+        <activity android:name=".Apsuat" />
+        <activity android:name=".BMI" />
+        <activity android:name=".Goc" />
+        <activity android:name=".Trongluong" />
+        <activity android:name=".Sohoc" />
+        <activity android:name=".TheTich" />
+        <activity android:name=".Dientich" />
+        <activity android:name=".Chieudai" />
+        <activity android:name=".Currency" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

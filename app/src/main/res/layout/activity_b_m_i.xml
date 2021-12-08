@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BMI"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/bmi"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="Chỉ số BMI"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-smallcaps"/>
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Cân nặng: "
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-light"/>
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/viencong"
+        >
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-light"
+            android:hint="50"
+            android:inputType="number"
+            android:id="@+id/edtcannang"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text="kg"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Chiều cao: "
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-light"/>
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/viencong"
+            >
+            <EditText
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-light"
+                android:hint="50"
+                android:inputType="number"
+                android:id="@+id/edtchieucao"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:text="cm"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+<Button
+    android:layout_width="90dp"
+    android:layout_height="70dp"
+    android:text="Tính"
+    android:textAllCaps="false"
+    android:layout_marginTop="20dp"
+    android:textSize="20sp"
+    android:fontFamily="sans-serif-light"
+    android:layout_gravity="center"
+    android:id="@+id/tinh"
+    android:onClick="Chuyen"
+    android:background="@drawable/time"
+    />
+
+
+</LinearLayout>

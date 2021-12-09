@@ -11,7 +11,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Currency Converter"
+        android:text="Chuyển đổi tiền tệ"
         android:textSize="25sp"
         android:layout_gravity="center"
         android:layout_margin="10dp"
@@ -26,7 +26,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Currency to be converted"
+            android:text="Nhập giá trị"
             android:textSize="15dp"
             android:layout_margin="10dp"
             />
@@ -42,7 +42,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="From Currency:"
+            android:text="Từ:"
             android:textSize="15dp"
             android:layout_margin="10dp"
             />
@@ -65,7 +65,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="To Currency:"
+            android:text="Đến:"
             android:textSize="15dp"
             android:layout_margin="10dp"
             />
@@ -98,8 +98,8 @@
         android:layout_marginRight="162dp"
         android:layout_marginBottom="30dp"
         android:textColor="@android:color/white"
-        android:background="@drawable/time"
-        android:text="Convert"
+        android:background="@drawable/oval"
+        android:text="Chuyển"
         />
 
     <EditText

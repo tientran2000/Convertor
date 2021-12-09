@@ -1,20 +1,35 @@
 package com.example.iconvertor;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ListView;
+import android.widget.Toolbar;
+
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
-    ImageButton timkiem,chieudai,thetich,dientich,thoigian,goc,trongluong,bmi,doam,nhietdo,vantoc,giatoc,luc,tiente,kichco,sohoc;
+    Toolbar toolbar;
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    ListView lv;
+    ImageButton menu,timkiem,chieudai,thetich,dientich,thoigian,goc,trongluong,bmi,doam,nhietdo,vantoc,giatoc,luc,tiente,kichco,sohoc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,10 +40,11 @@ public class MainActivity extends AppCompatActivity {
 //        recyclerView.setLayoutManager(gridLayoutManager);
 //        adapter.setData(getList());
 //        recyclerView.setAdapter(adapter);
-        ActionBar a=getSupportActionBar();
-        a.hide();
+
         Init();
     }
+
+
 
     private void Init() {
         chieudai=findViewById(R.id.chieudai);
@@ -47,7 +63,9 @@ public class MainActivity extends AppCompatActivity {
         luc=findViewById(R.id.luc);
         sohoc=findViewById(R.id.sohoc);
         timkiem=findViewById(R.id.loupe);
+        menu=findViewById(R.id.menu);
 
+        drawerLayout=findViewById(R.id.drawebleLayout);
     }
 
 
@@ -114,10 +132,75 @@ public class MainActivity extends AppCompatActivity {
                 i = new Intent(this, Giatoc.class);
                 startActivity(i);
                 break;
-            case R.id.loupe:
-                i = new Intent(this, Timkiem.class);
-                startActivity(i);
-                break;
+
         }
+    }
+    public void ClickMenu(View view){
+        openDrawer(drawerLayout);
+    }
+
+    public static void openDrawer(DrawerLayout drawerLayout) {
+    drawerLayout.openDrawer(GravityCompat.START);
+    }
+    public void ClickLogo(View view){
+        closeDrawer(drawerLayout);
+    }
+
+    public static void closeDrawer(DrawerLayout drawerLayout) {
+        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
+            drawerLayout.closeDrawer(GravityCompat.START);
+        }
+    }
+    public void ClickHome(View view){
+        recreate();
+    }
+    public void ClickDashboard(View v){
+        Share();
+    }
+    public void ClickAboutUs(View view){
+        redirectActivity(this,AboutUs.class);
+    }
+    public  void ClickExit(View view){
+Logout(this);
+    }
+    public static void Logout(Activity activity){
+        AlertDialog.Builder builder=new AlertDialog.Builder(activity);
+        builder.setTitle("Thoát");
+        builder.setMessage("Bạn muốn thoát khỏi ứng dụng?");
+        builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                activity.finishAffinity();
+                System.exit(0);
+            }
+        });
+        builder.setNegativeButton("Không", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        builder.show();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        closeDrawer(drawerLayout);
+    }
+    public void Search(View view){
+        redirectActivity(this,Timkiem.class);
+    }
+    public static void redirectActivity(Activity activity,Class a){
+        Intent i=new Intent(activity,a);
+        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        activity.startActivity(i);
+    }
+    public void Share(){
+        Intent intent=new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        String sharebody="https://github.com/tientran2000/Convertor.git";
+        intent.putExtra(Intent.EXTRA_TEXT,sharebody);
+        startActivity(Intent.createChooser(intent,"Chia sẻ với"));
     }
 }

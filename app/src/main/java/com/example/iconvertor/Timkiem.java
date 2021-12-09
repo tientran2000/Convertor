@@ -32,7 +32,6 @@ String [] strings={"Chiều dài","Diện tích","Thể tích","Nhiệt độ","
         for (String i:strings) {
             arrayList.add(i);
         }
-        //Toast.makeText(this,"d",Toast.LENGTH_SHORT).show();
         edttk.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -70,71 +69,70 @@ String [] strings={"Chiều dài","Diện tích","Thể tích","Nhiệt độ","
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(Timkiem.this,arrayList.get(position),Toast.LENGTH_SHORT).show();
                 Intent i;
                 xau=arr.get(position).toString();
-//                switch (xau){
-//                    case "Số học":
-//                        i = new Intent(Timkiem.this, Sohoc.class);
-//                        startActivity(i);
-//                        break;
-//                    case "Diện tích":
-//                        i = new Intent(Timkiem.this, Dientich.class);
-//                        startActivity(i);
-//                        break;
-//                    case "Thể tích":
-//                        i = new Intent(Timkiem.this, TheTich.class);
-//                        startActivity(i);
-//                        break;
-//                    case "Chiều dài":
-//                        i = new Intent(Timkiem.this, Chieudai.class);
-//                        startActivity(i);
-//                        break;
-//                    case "Góc":
-//                        i = new Intent(Timkiem.this, Goc.class);
-//                        startActivity(i);
-//                        break;
-//                    case "Lực":
-//                        i = new Intent(Timkiem.this, Luc.class);
-//                        startActivity(i);
-//                        break;
-//                    case "Thời gian":
-//                        i = new Intent(Timkiem.this, Thoigian.class);
-//                        startActivity(i);
-//                        break;
-//                    case "Tiền tệ":
-//                        i = new Intent(Timkiem.this, Currency.class);
-//                        startActivity(i);
-//                        break;
-//                    case "Trọng lượng":
-//                        i = new Intent(Timkiem.this, Trongluong.class);
-//                        startActivity(i);
-//                        break;
-//                    case "BMI":
-//                        i = new Intent(Timkiem.this, BMI.class);
-//                        startActivity(i);
-//                        break;
-//                    case "Áp suất":
-//                        i = new Intent(Timkiem.this, Apsuat.class);
-//                        startActivity(i);
-//                        break;
-//                    case "Nhiệt độ":
-//                        i = new Intent(Timkiem.this, Nhietdo.class);
-//                        startActivity(i);
-//                        break;
-//                    case "Kích cỡ":
-//                        i = new Intent(Timkiem.this, Kichco.class);
-//                        startActivity(i);
-//                        break;
-//                    case "Vận tốc":
-//                        i = new Intent(Timkiem.this, Vantoc.class);
-//                        startActivity(i);
-//                        break;
-//                    case "Gia tốc":
-//                        i = new Intent(Timkiem.this, Giatoc.class);
-//                        startActivity(i);
-//                        break;
-//                }
+                switch (xau.toLowerCase()){
+                    case "số học":
+                        i = new Intent(Timkiem.this, Sohoc.class);
+                        startActivity(i);
+                        break;
+                    case "diện tích":
+                        i = new Intent(Timkiem.this, Dientich.class);
+                        startActivity(i);
+                        break;
+                    case "thể tích":
+                        i = new Intent(Timkiem.this, TheTich.class);
+                        startActivity(i);
+                        break;
+                    case "chiều dài":
+                        i = new Intent(Timkiem.this, Chieudai.class);
+                        startActivity(i);
+                        break;
+                    case "góc":
+                        i = new Intent(Timkiem.this, Goc.class);
+                        startActivity(i);
+                        break;
+                    case "lực":
+                        i = new Intent(Timkiem.this, Luc.class);
+                        startActivity(i);
+                        break;
+                    case "thời gian":
+                        i = new Intent(Timkiem.this, Thoigian.class);
+                        startActivity(i);
+                        break;
+                    case "tiền tệ":
+                        i = new Intent(Timkiem.this, Currency.class);
+                        startActivity(i);
+                        break;
+                    case "trọng lượng":
+                        i = new Intent(Timkiem.this, Trongluong.class);
+                        startActivity(i);
+                        break;
+                    case "bmi":
+                        i = new Intent(Timkiem.this, BMI.class);
+                        startActivity(i);
+                        break;
+                    case "áp suất":
+                        i = new Intent(Timkiem.this, Apsuat.class);
+                        startActivity(i);
+                        break;
+                    case "nhiệt độ":
+                        i = new Intent(Timkiem.this, Nhietdo.class);
+                        startActivity(i);
+                        break;
+                    case "kích cỡ":
+                        i = new Intent(Timkiem.this, Kichco.class);
+                        startActivity(i);
+                        break;
+                    case "vận tốc":
+                        i = new Intent(Timkiem.this, Vantoc.class);
+                        startActivity(i);
+                        break;
+                    case "gia tốc":
+                        i = new Intent(Timkiem.this, Giatoc.class);
+                        startActivity(i);
+                        break;
+                }
 
             }
         });

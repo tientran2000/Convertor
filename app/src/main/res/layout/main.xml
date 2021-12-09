@@ -5,46 +5,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="#7AEAFFFA">
-    <LinearLayout
+    <androidx.drawerlayout.widget.DrawerLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:layout_marginBottom="30dp">
-        <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/menu"
-            android:scaleType="centerCrop"
-            android:id="@+id/menu"
-            android:layout_marginLeft="5dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:text="Iconvertor"
-            android:textSize="30sp"
-            android:textColor="@color/black"
-            android:fontFamily="serif"
-            android:layout_marginLeft="10dp"/>
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:id="@+id/drawebleLayout">
 
-        <ImageButton
-            android:layout_gravity="center"
-            android:id="@+id/star"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="45dp"
-            android:scaleType="centerCrop"
-            android:background="@drawable/star" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <include
+        layout="@layout/main_toolbar"/>
 
-        <ImageButton
-            android:layout_gravity="center"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@drawable/loupe"
-            android:scaleType="centerInside"
-            android:id="@+id/loupe"
-            android:layout_marginLeft="3dp"
-            android:onClick="onClick"/>
-    </LinearLayout>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -422,5 +395,17 @@
 
         </LinearLayout>
     </ScrollView>
+</LinearLayout>
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/white"
 
+            >
+            <include
+                layout="@layout/layout_menu"/>
+        </RelativeLayout>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
 </LinearLayout>

@@ -7,16 +7,16 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icapp"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Iconvertor">
-        <activity android:name=".Timkiem"></activity>
+        <activity android:name=".AboutUs"></activity>
+        <activity android:name=".Timkiem" />
         <activity android:name=".Thoigian" />
         <activity android:name=".Luc" />
         <activity android:name=".Kichco" />
-        <activity android:name=".Tiente" />
         <activity android:name=".Giatoc" />
         <activity android:name=".Vantoc" />
         <activity android:name=".Nhietdo" />

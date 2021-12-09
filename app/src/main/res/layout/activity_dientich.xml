@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Chieudai">
+    tools:context=".Dientich">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginTop="10dp">
         <EditText
             android:inputType="number"
             android:layout_width="140dp"
@@ -22,11 +23,12 @@
             android:gravity="center"
             android:background="@drawable/viencong"/>
         <LinearLayout
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:layout_width="wrap_content"
             android:layout_height="40sp"
             android:orientation="vertical"
-            android:background="@drawable/viencong">
+            android:background="@drawable/viencong"
+            android:gravity="center">
             <Spinner
                 android:layout_width="100dp"
                 android:layout_height="25dp"
@@ -52,14 +54,17 @@
         <TableRow
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:background="@drawable/vien"
             >
+
             <TextView
+                android:id="@+id/tvmm"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
-                android:id="@+id/tvmm"
+                android:gravity="center"
                 android:textColor="#000000"
-                android:textSize="20sp"
-                android:gravity="center"/>
+                android:textSize="20sp" />
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="30dp"
@@ -77,6 +82,7 @@
         <TableRow
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:background="@drawable/vien"
             >
             <TextView
                 android:layout_width="200dp"
@@ -102,6 +108,7 @@
         <TableRow
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+            android:background="@drawable/vien"
         >
         <TextView
             android:layout_width="200dp"
@@ -127,6 +134,7 @@
         <TableRow
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:background="@drawable/vien"
             >
             <TextView
                 android:layout_width="200dp"
@@ -152,6 +160,7 @@
         <TableRow
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:background="@drawable/vien"
             >
             <TextView
                 android:layout_width="200dp"
@@ -177,6 +186,7 @@
         <TableRow
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:background="@drawable/vien"
             >
             <TextView
                 android:layout_width="200dp"
@@ -202,6 +212,7 @@
         <TableRow
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:background="@drawable/vien"
             >
             <TextView
                 android:layout_width="200dp"
@@ -227,6 +238,7 @@
         <TableRow
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:background="@drawable/vien"
             >
             <TextView
                 android:layout_width="200dp"
@@ -252,6 +264,7 @@
         <TableRow
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:background="@drawable/vien"
             >
             <TextView
                 android:layout_width="200dp"
